@@ -6,10 +6,10 @@ class App extends Component {
     super(props)
     this.state = {
     	items: [
-      	{ name: "Learn JavaScript", done: false },
-        { name: "Learn React", done: false },
-        { name: "Play around in JSFiddle", done: true },
-        { name: "Build something awesome", done: true }
+      	{ name: "name1", description: "description 1" },
+        { name: "name2", description: "description 2" },
+        { name: "name3", description: "description 3" },
+        { name: "name4", description: "description 4" }
       ]
     }
   }
@@ -17,15 +17,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Todos:</h2>
+        <h2>Projects:</h2>
         <ol>
         {this.state.items.map(item => (
-          <li key={item.id}>
+          <ul key={item.id}>
+
             <label>
-              // <input type="checkbox" disabled readOnly checked={item.done} />
-              <span className={item.done ? "done" : ""}>{item.name}</span>
+              <li><p>{item.name} </p></li>
+              <li>{item.description}</li>
+              <hr></hr>
             </label>
-          </li>
+          </ul>
         ))}
         </ol>
       </div>
