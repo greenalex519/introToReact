@@ -23,7 +23,7 @@ class App extends Component {
           <ul key={item.id}>
 
             <label>
-              <li><p>{item.name} </p></li>
+              <li>{item.name} </li>
               <li>{item.description}</li>
               <hr></hr>
             </label>
